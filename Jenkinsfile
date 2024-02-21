@@ -47,4 +47,21 @@ pipeline {
             }
         }
     }
+    post { 
+        always { 
+            echo 'I will always say Hello again!'
+        }
+        failure {
+            echo 'This runs when pipeline is failed, used generally to send some alerts'
+        }
+        success { 
+            echo 'This will run when STAGE is SUCCESS, used generally to send some NOTIFICATIONS'
+        }
+        aborted { 
+            echo 'Usually due to when PIPELINE is MANUALLY ABORTED'
+        }
+        regression { 
+            echo ' This will run when current PIPELINE or STATUS is FAILED'
+        }
+    }
 }

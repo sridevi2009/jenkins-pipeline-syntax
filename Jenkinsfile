@@ -6,6 +6,9 @@ pipeline {
     }
     environment { 
         GREETING = "HELLO-JENKINS"
+        options {
+           timeout(time: 1, unit: 'HOURS') 
+        }
     }
 
     stages {

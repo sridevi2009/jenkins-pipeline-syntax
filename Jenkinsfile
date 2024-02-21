@@ -8,7 +8,7 @@ pipeline {
         GREETING = "HELLO-JENKINS"
     }
     options {
-        timeout(time: 1, unit: 'HOURS') 
+        timeout(time: 1, unit: 'SECONDS') 
     }
 
     stages {

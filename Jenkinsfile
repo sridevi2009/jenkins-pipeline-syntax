@@ -27,7 +27,7 @@ pipeline {
          stage('code') {
             steps {
                 sh """
-                  sleep 10
+                 # sleep 10
                 """
             }
         }
@@ -71,15 +71,17 @@ pipeline {
         }
         stage('check params') {
             steps {
-                echo "Hello ${params.PERSON}"
+                sh """
+                  echo "Hello ${params.PERSON}"
 
-                echo "Biography: ${params.BIOGRAPHY}"
+                  echo "Biography: ${params.BIOGRAPHY}"
 
-                echo "Toggle: ${params.TOGGLE}"
+                  echo "Toggle: ${params.TOGGLE}"
 
-                echo "Choice: ${params.CHOICE}"
+                  echo "Choice: ${params.CHOICE}"
 
-                echo "Password: ${params.PASSWORD}"
+                  echo "Password: ${params.PASSWORD}"
+                """  
             }
         }
     }

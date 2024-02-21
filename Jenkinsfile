@@ -74,17 +74,17 @@ pipeline {
         }
         stage('check params') {
             steps {
-                sh """
-                  echo "Hello ${params.PERSON}"
+                
+                echo "Hello ${params.PERSON}"
 
-                  echo "Biography: ${params.BIOGRAPHY}"
+                echo "Biography: ${params.BIOGRAPHY}"
 
-                  echo "Toggle: ${params.TOGGLE}"
+                echo "Toggle: ${params.TOGGLE}"
 
-                  echo "Choice: ${params.CHOICE}"
+                echo "Choice: ${params.CHOICE}"
 
-                  echo "Password: ${params.PASSWORD}"
-                """  
+                echo "Password: ${params.PASSWORD}"
+                  
             }
         }
     }

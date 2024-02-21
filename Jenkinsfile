@@ -14,7 +14,9 @@ pipeline {
     stages {
          stage('code') {
             steps {
-                echo 'Hi im writing code..'
+                sh """
+                 sleep 10
+                """
             }
         }
         stage('Build') {

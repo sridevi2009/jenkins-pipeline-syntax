@@ -9,13 +9,14 @@ pipeline {
     }
     options {
         timeout(time: 1, unit: 'HOURS') 
+        disableConcurrentBuilds()
     }
 
     stages {
          stage('code') {
             steps {
                 sh """
-                 sleep 10
+                 # sleep 10
                 """
             }
         }

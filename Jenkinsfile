@@ -16,7 +16,7 @@ pipeline {
          stage('code') {
             steps {
                 sh """
-                 # sleep 10
+                  sleep 10
                 """
             }
         }
